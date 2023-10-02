@@ -2,8 +2,6 @@ from node:latest
 
 WORKDIR /app
 
-ENV VITE_URL=http://localhost:3200
-
 COPY package.json .
 
 COPY yarn.lock .
