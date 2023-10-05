@@ -1,1 +1,18 @@
 version: "2.21.0"
+
+services:
+  api:
+    container_name: api
+    build: api/
+    network_mode: host
+    ports:
+      - "3200:3200"
+
+    
+
+  front:
+    container_name: front
+    build: front/
+    network_mode: host
+    ports:
+      - "3000:3000"
