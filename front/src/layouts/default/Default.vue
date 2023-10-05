@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer :width="235">
-      <v-list-item title="API" subtitle="Frontend"></v-list-item>
+      <v-list-item title="Upload de Arquivos" subtitle="Frontend"></v-list-item>
       <v-divider></v-divider>
 
       <v-list-item link :to="{ name: 'Home' }" title="Home"></v-list-item>

@@ -7,6 +7,7 @@
         :action="url + '/files'"
         method="post"
         enctype="multipart/form-data"
+        @submit.prevent="fileUpload"
       >
         <v-file-input
           accept="*"
@@ -22,5 +23,16 @@
   </div>
 </template>
 <script setup>
+import router from "@/router";
+import axios from "axios";
+
 const url = import.meta.env.VITE_URL;
+
+async function fileUpload() {
+  const file = document.getElementById("file").files[0];
+  const data = new FormData();
+  data.append("file", file);
+  await axios.post(`${url}/files`, data);
+  router.push("/");
+}
 </script>
